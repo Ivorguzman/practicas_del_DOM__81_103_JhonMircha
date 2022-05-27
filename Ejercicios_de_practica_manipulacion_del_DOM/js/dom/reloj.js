@@ -1,13 +1,14 @@
+const d = document;
+
 export function digitalClock($clock, $btnPlay, $btnStop) {
-    const d = document;
     let clockTempo; //variable que controla el temporizador
     d.addEventListener('click', (e) => {
         if (e.target.matches($btnPlay)) {
             clockTempo = setInterval(() => {
                 let clockHour = new Date().toLocaleTimeString();
-                d.querySelector($clock).innerHTML = `<h3>${clockHour}</h3>`;
+                d.querySelector($clock).innerHTML = `<h1>${clockHour}</h1>`;
             }, 1000);
-            e.target.disabled = true;
+            d.querySelector($btnPlay).disabled = true;
         }
         if (e.target.matches($btnStop)) {
             clearInterval(clockTempo);
@@ -17,20 +18,26 @@ export function digitalClock($clock, $btnPlay, $btnStop) {
     });
 };
 export function alarm($sound, $btnPlay, $btnStop) {
-    console.log($btnPlay)
-    let alarmaTempo;//variable que controla el temporizador
+    let alarmTempo;//variable que controla el temporizador
     const $alarm = d.createElement("audio");
+    $alarm.src = $sound;
     // Delegacion de evnto
     d.addEventListener('click', (e) => {
         if (e.target.matches($btnPlay)) {
-            alarmaTempo = setTimeout(() => {
-
-            }, 1000);
-
-
+            alarmTempo = setTimeout(() => {
+                $alarm.play();
+            }, 100);
+            d.querySelector($btnPlay).disabled = true;
+        }
+        if (e.target.matches($btnStop)) {
+            clearTimeout(alarmTempo);
+            $alarm.pause();
+            $alarm.currentTime = 0;
+            d.querySelector($btnPlay).disabled = false;
         }
     });
 };
+
 
 
 /// PointerEvent{}

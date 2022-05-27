@@ -6,7 +6,6 @@ export default function hamburgerMenu($panelBtn, $panel,$menu) {
         //.target Devuelve el objeto al que se envía el evento (su destino)
         if (e.target.matches($panelBtn) || e.target.matches(`${$panelBtn} *`)) {
             console.log(e.target);
-            d.querySelector($panel).classList
             d.querySelector($panel).classList.toggle('panel_active');
             d.querySelector($panelBtn).classList.toggle('is-active');
         }
