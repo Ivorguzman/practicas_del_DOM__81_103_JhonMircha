@@ -15,5 +15,9 @@ export function shortcuts(e) {
     if (e.key === 'm' && e.altKey === true) { confirm('Presionaste las teclas Alt ->  m'); };
     // if (e.key === 'p' && e.ctrlKey === true) { prompt('Presionaste las teclas ctrl -> p'); };
 
-    if (e.key === 'i' && e.ctrlKey === true && e.altKey === true) { confirm('Presionaste las teclas Ctrl + Alt  ->  i') };
+    if (e.key === 'i' && e.ctrlKey === true && e.altKey === true) { confirm('Presionaste las teclas Ctrl + Alt  ->  i'); };
+}
+
+export function moveBall(e, ball, stage) {
+
 }

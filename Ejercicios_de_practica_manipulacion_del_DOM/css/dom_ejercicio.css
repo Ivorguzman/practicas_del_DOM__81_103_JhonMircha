@@ -95,6 +95,7 @@ img {
     /* transition: transform.5s ease; */
     visibility: hidden;
 }
+
 .panel_active {
 
     position: fixed;
@@ -114,6 +115,7 @@ img {
     /* transform: translate(0,0); */
     visibility: visible;
 }
+
 .panel-btn {
 
     position: fixed;
@@ -142,12 +144,13 @@ img {
 
     text-align: center;
 }
-.menu a{
+
+.menu a {
 
     display: block;
 
     width: inherit;
-    padding:2rem;
+    padding: 2rem;
 
     font-size: 1.5rem;
     text-decoration: none;
@@ -157,11 +160,24 @@ img {
 }
 
 
-.menu a:hover{
+.menu a:hover {
 
     background-color: var(--main-modal-color);
 
     font-weight: bold;
     color: var(--second-color);
 }
-    
+
+/* Eventos del tecalado  */
+.stage {
+    display: flex;
+    min-height: 50vh;
+    background-color:var(--second-color);
+}
+.ball{
+    margin:auto;
+    width:4rem;
+    height:4rem;
+    border-radius:50%;
+    background-color:var(--main-color);
+}
