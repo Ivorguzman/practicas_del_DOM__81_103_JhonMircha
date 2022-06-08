@@ -18,11 +18,11 @@ export default function countDown(id, limitDate, finalMessage) {
 
         $countDown.innerHTML = `<h3> Faltan: ${days} dias, ${hours} Horas ${minutes} minutos, y  ${seconds} segundos   </h3>`;
 
-        // if (limitTime < 0) {
-        //     clearInterval(countDownTempo);
-        //     $countDown.innerHTML = null;
-        //     $countDown.innerHTML = ` <h1>${finalMessage}</h1>`;
-        // }
+        if (limitTime < 0) {
+            clearInterval(countDownTempo);
+            $countDown.innerHTML = null;
+            $countDown.innerHTML = ` <h1>${finalMessage}</h1>`;
+        }
 
     }, 1000);
 

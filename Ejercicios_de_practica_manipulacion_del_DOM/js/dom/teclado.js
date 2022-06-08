@@ -1,6 +1,7 @@
 const d = document;
 let x = 0;
 let y = 0;
+console.log()
 
 
 
@@ -74,8 +75,8 @@ export function moveBall(e, ball, stage) {
 
 
 export function shortcuts(e) {
-    // console.log(e);
-    // console.log(e.type);
+     console.log(e);
+    console.log(e.type);
     // console.log(e.key);
     // console.log(e.keyCode);
     // console.log(e.ctrlKey);
