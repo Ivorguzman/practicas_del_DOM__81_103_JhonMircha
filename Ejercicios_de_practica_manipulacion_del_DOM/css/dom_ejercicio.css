@@ -111,8 +111,6 @@ img {
     transition: opacity .60s ease-in-out;
     opacity: 1;
 
-    /* transition: transform.5s ease; */
-    /* transform: translate(0,0); */
     visibility: visible;
 }
 
@@ -206,7 +204,38 @@ img {
     background-color: var(--second-color);
     color: var(--main-color);
 }
+
 .hidden {
     visibility: hidden;
     opacity: 0;
 }
+
+.dark__theme-btn {
+    position: fixed;
+    z-index: 999;
+    bottom: 1vh;
+    width: 4rem;
+    height: 4rem;
+    left: 1vw;
+    border-radius: 50%;
+    font-size: 2.4rem;
+    font-weight: bold;
+    background-color: var(--main-color);
+    color: var(--second-color);
+    outline: none;
+    border: none;
+    Cursor: pointer;
+    transition: all .3s ease-in-out;
+    box-shadow: 0 1.3px 1px 0.1rem var(--second-color);
+}
+
+.dark__theme-btn:hover {
+    background-color: var(--second-color);
+    color: var(--main-color);
+}
+
+.dark__mode {
+    background-color: var(--second-color);
+    color: var(--main-color)
+}
+

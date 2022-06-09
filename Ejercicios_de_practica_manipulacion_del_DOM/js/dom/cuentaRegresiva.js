@@ -21,9 +21,12 @@ export default function countDown(id, limitDate, finalMessage) {
         if (limitTime < 0) {
             clearInterval(countDownTempo);
             $countDown.innerHTML = null;
-            $countDown.innerHTML = ` <h1>${finalMessage}</h1>`;
+            $countDown.innerHTML = `<h1>${finalMessage}</h1>`;
         }
 
     }, 1000);
 
+
 }
+
+
