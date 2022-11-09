@@ -47,7 +47,7 @@ const ls = w.localStorage;
 export default function darkTheme(btn, classDark) {
     const btnDataAttributes = d.querySelector(btn);
     const $selectorAtibutoData = d.querySelectorAll("[data-dark]");// se referencia el atributo html data
-    console.log($selectorAtibutoData);
+    // console.log($selectorAtibutoData);
     let moon = "🌙";
     let sun = "☀️";
 
@@ -63,6 +63,7 @@ export default function darkTheme(btn, classDark) {
     }
     d.addEventListener('click', e => {
         if (e.target.matches(btn)) {
+            // console.log(e.target.matches(btn))
             if (btnDataAttributes.textContent === moon) {
                 lightMode();
             } else {
@@ -71,13 +72,13 @@ export default function darkTheme(btn, classDark) {
         }
     });
     d.addEventListener('DOMContentLoaded', (e) => {
-        console.log(ls.getItem('theme '));
+        // console.log(ls.getItem('theme '));
         if (ls.getItem('theme') === null) {
             console.log('Dentro del if');
             ls.setItem('theme', 'light');
         };
         if (ls.getItem('theme') === 'light') {
-            console.log('Dentro del if 2');
+            // console.log('Dentro del if 2');
             ls.setItem('theme', 'dark');
             lightMode();
          }

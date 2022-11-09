@@ -1,12 +1,16 @@
 const d = document;
 let x = 0;
 let y = 0;
-console.log()
+// console.log()
 
 
 
 
 export function moveBall(e, ball, stage) {
+    console.log(e);
+    console.log(ball);
+    console.log(stage);
+    
     const $ball = d.querySelector(ball);
     const $stage = d.querySelector(stage);
     let limitBall = $ball.getBoundingClientRect();
@@ -14,16 +18,19 @@ export function moveBall(e, ball, stage) {
     console.log(limitBall);
     console.log(limitStage);
 
+    console.log($ball.style.transform = `translate(${x}px, ${y}px)`);
+    console.log($ball.style.transform = `translate(${x * 10}px, ${y * 10}px)`);
     $ball.style.transform = `translate(${x * 10}px, ${y * 10}px)`;
+    
 
     switch (e.keyCode) {
         case 37:
             console.log(e.key, e.keyCode);
             console.log(limitBall.left);
             console.log(limitStage.left);
-            if (limitBall.left > limitStage.left) { 
+            if (limitBall.left > limitStage.left) {
                 e.preventDefault();
-                x = x - .3; 
+                x = x - .3;
             };
             // x--;
             // x = x - .3;
@@ -62,7 +69,7 @@ export function moveBall(e, ball, stage) {
             };
             // y++
             // y = y + .3;
-            break; 
+            break;
         default:
             break;
 
@@ -75,8 +82,8 @@ export function moveBall(e, ball, stage) {
 
 
 export function shortcuts(e) {
-     console.log(e);
-    console.log(e.type);
+    // console.log(e);
+    // console.log(e.type);
     // console.log(e.key);
     // console.log(e.keyCode);
     // console.log(e.ctrlKey);
